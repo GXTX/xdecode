@@ -89,7 +89,13 @@ op_exit			EQU 0xEE
 	xc_opcode op_io_read, %1, 0
 %endmacro
 %macro xc_exit 0
-	xc_opcode op_exit, 0, 0
+	xc_opcode op_exit, 2054, 0
+%endmacro
+%macro xc_nop_F5 2
+	xc_opcode op_f5, %1, %2
+%endmacro
+%macro xc_nop_80 2
+        xc_opcode op_80, %1, %2
 %endmacro
 ```
 
